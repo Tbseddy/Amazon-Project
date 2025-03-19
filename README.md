@@ -7,3 +7,6 @@
 
 
 To change the HTML inside the element use **.innerHTML**
+
+
+#### Benefits of Generating the HTML
