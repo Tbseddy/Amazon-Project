@@ -20,3 +20,7 @@ It also allows us to attach any information to an element
 * It is just an HTML attribute 
 * The Data attribut have to start with "data-"
 * You can then give it any name 
+
+
+12:23:28
+
