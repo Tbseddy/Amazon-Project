@@ -1,1 +1,1 @@
-const cart = [];
+export const cart = []; // we want to access the variable cart outside of this cart

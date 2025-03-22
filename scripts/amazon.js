@@ -1,4 +1,4 @@
-
+import {cart} from '../data/cart.js';
 
 // the above is what we can call a Data Structure
 
