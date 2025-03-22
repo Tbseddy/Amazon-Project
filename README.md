@@ -22,7 +22,7 @@ It also allows us to attach any information to an element
 * You can then give it any name 
 
 
-12:23:28
+**12:23:28**
 
 #### Create a Module
 1. Create a file 
@@ -39,3 +39,5 @@ It also allows us to attach any information to an element
 #### Benefits of Modules
 1. It helps us to avoid naming conflicts
 2. We don't have to worry about the order of our files
+
+**12:42:00**
