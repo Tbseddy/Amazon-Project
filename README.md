@@ -41,3 +41,9 @@ It also allows us to attach any information to an element
 2. We don't have to worry about the order of our files
 
 **13:34:55**
+
+#### Steps for Creating a function for removing a product from the cart 
+
+1. Create a new array
+2. Loop through the cart
+3. Add each product to the new array, except for this productId
