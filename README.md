@@ -47,3 +47,8 @@ It also allows us to attach any information to an element
 1. Create a new array
 2. Loop through the cart
 3. Add each product to the new array, except for this productId
+
+#### When we click delete we want to remove the product from the page
+
+1. Use the DOM to get the element to remove
+2. Use **.remove()** method
