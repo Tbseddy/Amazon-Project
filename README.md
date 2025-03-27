@@ -52,3 +52,8 @@ It also allows us to attach any information to an element
 
 1. Use the DOM to get the element to remove
 2. Use **.remove()** method
+
+
+* LocalStorage can only save string. **JSON.stringify(cart)** this will convert the cart into a string
+
+* **JSON.parse(localStorage.getItem('cart'));** this is to convert the string 'cart' to an array
