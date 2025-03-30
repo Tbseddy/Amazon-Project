@@ -170,7 +170,7 @@ const priceString = deliveryOption.priceCents === 0
 How Tenary operator works: If the first part returns true the value is whatever is after the ?. If it is false the value is whatever is after the :. It is just like an if statement except that we can save the result in a variable
 
 
-${isChecked ? 'Checked' : ''}  // Using Tenary operator here
-
+${isChecked ? 'Checked' : ''}  // Using Tenary operator here //
 
 Recursion is when a function re-run itself
+

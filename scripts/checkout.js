@@ -163,7 +163,7 @@ function renderOrderSummary() {
 
         document.querySelectorAll('.js-delivery-option')
             .forEach((element) => {
-                element.addEventListener('clicks', () => {
+                element.addEventListener('click', () => {
                     const {productId, deliveryOptionId} = element.dataset;
                     updateDeliveryOption(productId, deliveryOptionId);
                     renderOrderSummary();
@@ -172,3 +172,6 @@ function renderOrderSummary() {
         }
 
         renderOrderSummary();
+
+
+       
