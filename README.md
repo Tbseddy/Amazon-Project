@@ -164,13 +164,21 @@ If you get an error in and your project code looks correct, you might have some 
 **14:30:00**
 
 
+${isChecked ? 'Checked' : ''}  // Using Tenary operator here //
+
+Recursion is when a function re-run itself
+
+
+
 const priceString = deliveryOption.priceCents === 0
 *            ? 'FREE'
 *            : `$${deliveryOption.priceCents}`
 How Tenary operator works: If the first part returns true the value is whatever is after the ?. If it is false the value is whatever is after the :. It is just like an if statement except that we can save the result in a variable
 
 
-${isChecked ? 'Checked' : ''}  // Using Tenary operator here //
-
-Recursion is when a function re-run itself
+##### MVC Model View Controller
+MVC is a design pattern, it's a way to organize and design our code. In MVC we split our code into 3 parts:
+1. Model: All the codes that saves and manages the data
+2. View: This is the code that takes the data and displays it on the page
+3. Controller: This run some code when we interact with the page e.g eventlistener
 
