@@ -16,7 +16,7 @@ export function renderPaymentSummary() {
     });
 
    const totalBeforeTaxCents = productPriceCents + shippingPriceCents;
-   const taxCents = totalBeforeTaxCents * 10 / 100;
+   const taxCents = totalBeforeTaxCents * 0.1;  // (10/100 = 0.1)
    const totalCents = totalBeforeTaxCents + taxCents;
 
 

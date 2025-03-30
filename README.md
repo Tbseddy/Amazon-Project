@@ -211,7 +211,7 @@ MVC is a design pattern, it's a way to organize and design our code. In MVC we s
 2. Generate the HTML
 3. Make it interactive
 
-### Save the data (Model)
+### Save the data (Model)  in the paymentSummary.js
 #### Calculating the items
 Let's start by calculating the cost of the products: Steps
 1. Loop through the cart 
@@ -267,7 +267,7 @@ Let's start by calculating the cost of the products: Steps
 *        shippingPriceCents += deliveryOption.priceCents;
 *    });
 *     const totalBeforeTaxCents = productPriceCents + shippingPriceCents; // Calculating Total before Tax
-*     const taxCents = totalBeforeTaxCents * 10 / 100;  // calculating estimated tax of 10%
+*     const taxCents = totalBeforeTaxCents * 0.1;  // calculating estimated tax of 10% (10/100 = 0.1)
 *     const totalCents = totalBeforeTaxCents + taxCents; // 
 *     
 * **To Generate the HTML (View)**
@@ -316,7 +316,15 @@ Let's start by calculating the cost of the products: Steps
 * }
 
 
-### 
+### Make it Interactive(Controller) in the orderSummary.js
+
+Firstly we will import from the paymentSummary.js
+
+* import { renderPaymentSummary } from './paymentSummary.js';
+
+We will then use the function in the eventListener putting it under the **container.remove()**
+
+*  renderOrderSummary();
 
 
 
