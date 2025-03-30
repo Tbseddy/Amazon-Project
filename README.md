@@ -176,9 +176,148 @@ const priceString = deliveryOption.priceCents === 0
 How Tenary operator works: If the first part returns true the value is whatever is after the ?. If it is false the value is whatever is after the :. It is just like an if statement except that we can save the result in a variable
 
 
+#### How to put a code inside a function
+* let matchingProduct;
+* 
+*        products.forEach((product) => {
+*            if (product.id === productId) {
+*                matchingProduct = product;
+*            }
+*        });
+*        
+
+* function getProduct(productId) {
+*  let matchingProduct;
+* 
+*        products.forEach((product) => {
+*            if (product.id === productId) {
+*                matchingProduct = product;
+*            }
+*        });
+* 
+*        return matchingProduct();
+* }
+
+
 ##### MVC Model View Controller
 MVC is a design pattern, it's a way to organize and design our code. In MVC we split our code into 3 parts:
 1. Model: All the codes that saves and manages the data
 2. View: This is the code that takes the data and displays it on the page
 3. Controller: This run some code when we interact with the page e.g eventlistener
+
+#### Working on paymentSummary.js
+
+1. Save the data (Model)
+2. Generate the HTML
+3. Make it interactive
+
+### Save the data (Model)
+#### Calculating the items
+Let's start by calculating the cost of the products: Steps
+1. Loop through the cart 
+2. For each product, price * quantity
+3. Add everything together
+
+* export function renderPaymentSummary() {
+*    let productPriceCents = 0;
+* 
+*    cart.forEach((cartItem) => {
+*        const product = getProduct(cartItem.productId);
+*        productPriceCents += product.priceCents * cartItem.quantity;
+*    })
+* }
+
+#### Calculating the Cost of Shipping Steps:
+1. Loop through the cart 
+2. Add all the shipping costs together 
+
+##### Creating a function with the below code:
+*     let deliveryOption;
+* 
+*        deliveryOptions.forEach((option) => {
+*            if(option.id === deliveryOptionId) {
+*                deliveryOption = option;
+*            }
+*        });
+*        
+
+
+* export function getDeliveryOption(deliveryOptionId) {
+*    let deliveryOption;
+* 
+*    deliveryOptions.forEach((option) => {
+*        if(option.id === deliveryOptionId) {
+*            deliveryOption = option;
+*        }
+*    });
+* 
+*    return deliveryOption || deliveryOptions[0];
+* }
+
+
+* function renderPaymentSummary() {
+*    let productPriceCents = 0;
+*    let shippingPriceCents = 0;
+* 
+*    cart.forEach((cartItem) => {
+*        const product = getProduct(cartItem.productId);
+*        productPriceCents += product.priceCents * cartItem.quantity;
+* 
+*        const deliveryOption = getDeliveryOption(cartItem.deliveryOptionId);
+*        shippingPriceCents += deliveryOption.priceCents;
+*    });
+*     const totalBeforeTaxCents = productPriceCents + shippingPriceCents; // Calculating Total before Tax
+*     const taxCents = totalBeforeTaxCents * 10 / 100;  // calculating estimated tax of 10%
+*     const totalCents = totalBeforeTaxCents + taxCents; // 
+*     
+* **To Generate the HTML (View)**
+*  
+* const paymentSummaryHTML = 
+*  `
+*        <div class="payment-summary-title">
+*                Order Summary
+*        </div>
+* 
+*            <div class="payment-summary-row">
+*                <div>Items (3):</div>
+*                <div class="payment-summary-money">$${formatCurrency(productPriceCents)}/div>
+*            </div>
+* 
+*            <div class="payment-summary-row">
+*                <div>Shipping &amp; handling:</div>
+*                <div class="payment-summary-money">$${formatCurrency(shippingPriceCents)}</div>
+*            </div>
+* 
+*            <div class="payment-summary-row subtotal-row">
+*                <div>Total before tax:</div>
+*                <div class="payment-summary-money">$${formatCurrency(totalBeforeTaxCents)}</div>
+*            </div>
+* 
+*            <div class="payment-summary-row">
+*                <div>Estimated tax (10%):</div>
+*                <div class="payment-summary-money">$${formatCurrency(taxCents)}</div>
+*            </div>
+* 
+*            <div class="payment-summary-row total-row">
+*                <div>Order total:</div>
+*                <div class="payment-summary-money">$${formatCurrency(totalCents)}</div>
+*            </div>
+* 
+*            <button class="place-order-button button-primary">
+*                Place your order
+*            </button>
+*   `;
+*   
+* **// To put the HTML on the page**
+*   document.querySelector('.js-payment-summary')
+*     
+* **To change the HTML inside the element using .innerHTML**
+*  .innerHTML = paymentSummaryHTML;
+* }
+
+
+### 
+
+
+
 
