@@ -39,6 +39,7 @@ It also allows us to attach any information to an element
 #### Benefits of Modules
 1. It helps us to avoid naming conflicts
 2. We don't have to worry about the order of our files
+3. It's a better way to organize our code
 
 **13:34:55**
 
@@ -57,3 +58,116 @@ It also allows us to attach any information to an element
 * LocalStorage can only save string. **JSON.stringify(cart)** this will convert the cart into a string
 
 * **JSON.parse(localStorage.getItem('cart'));** this is to convert the string 'cart' to an array
+
+#### External Libraries 
+It is basically code that is outside of our project and we can load the code using the below script tag
+
+<script src="https://unpkg.com/supersimpledev@1.0.1/hello.js"></script> **You can learn how to put code on the 
+internet (SuperSimpleDev)**
+
+How to Put a Website on the Internet: https://youtu.be/p1QU3kLFPdg
+
+#### Why we use External Libraries
+1. It let us share code
+2. It saves time
+3. It avoids duplicating work
+
+#### To get the dates in the delivery option
+1. Get today's date
+2. Do calculations with the date (add 7 days, or add 3 days)
+3. We need to display the date in easy to read format.
+
+We will use an external library called **DayJS** it is a popular library that helps us work with date. First we will load **DayJS** into our project
+
+**Minification** is an act of compressing a code for easy loading online and for easy accessing 
+
+External libraries usually have a documenetation page that shows us how to use the library. We can find the documentation page by searching on Google the library name e.g. **dayjs documentation** or ask AI how to use DayJS
+
+
+The **.add()** method takes two parameters: the first one is number of times we want to add; the second is the length of time that we want to add 
+
+If we want to add seven days to the present date **today.add(7, 'days');**
+
+#### Best Practice in Programing
+
+When we need to do something complicated, try to find an external library first before writing the code ourselves.
+
+#### How to find External Libraries
+We can search on Google or AI tool like this: **javascript date library**
+
+#### How to use External Library + JavaScript Module
+We are going to use a special version of the library called **ESM Version** 
+
+ESM = EcmaScript Module. (EcmaScript is just another name for JavaScript) The ESM version of a library is just a version that works with JavaScript modules 
+
+Hello (ESM version): https://unpkg.com/supersimpledev@1.0.1/hello.esm.js
+ **import {hello} from 'https://unpkg.com/supersimpledev@1.0.1/hello.esm.js';** 
+
+ DayJS (ESM version): https://unpkg.com/dayjs@1.11.10/esm/index.js 
+
+Not every library has ESM function
+
+#### Default Export
+
+This is another way of exporting something from a file, we can use when we only want to export one thing from a file e.g **export default formatCurrency;**
+
+**import formatCurrency from './utils/money.js';** 
+
+
+#### Named Export 
+
+export function formatCurrency(priceCents) {
+   return (priceCents / 100).toFixed(2);
+}
+
+**import {formatCurrency} from './utils/money.js';**
+
+
+If you get an error in and your project code looks correct, you might have some bad data saved in your localStorage. To fix it just type **localStorage.clear()** in your console to remove everthing from localStorage and then refresh the page 
+
+
+#### Creating a function to generate the delivery option HTML
+
+* function deliveryOptionsHTML() {
+*    deliveryOptions.forEach((deliveryOptions) => {
+*        `
+*            <div class="delivery-option">
+*                <input type="radio"
+*                class="delivery-option-input"
+*                name="delivery-option-${matchingProduct.id}">
+*                <div>
+*                <div class="delivery-option-date">
+*                    Wednesday, June 15
+*                </div>
+*                <div class="delivery-option-price">
+*                    $4.99 - Shipping
+*                </div>
+*                </div>
+*            </div>
+*            <div class="delivery-option">
+*                <input type="radio"
+*                class="delivery-option-input"
+*                name="delivery-option-${matchingProduct.id}">
+*                <div>
+*                <div class="delivery-option-date">
+*                    Monday, June 13
+*                </div>
+*                <div class="delivery-option-price">
+*                    $9.99 - Shipping
+*                </div>
+*                </div>
+*            </div>
+*        `
+*    });
+* }
+
+**14:30:00**
+
+
+const priceString = deliveryOption.priceCents === 0
+*            ? 'FREE'
+*            : `$${deliveryOption.priceCents}`
+How Tenary operator works: If the first part returns true the value is whatever is after the ?. If it is false the value is whatever is after the :. It is just like an if statement except that we can save the result in a variable
+
+
+${isChecked ? 'Checked' : ''}  // Using Tenary operator here
