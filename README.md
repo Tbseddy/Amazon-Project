@@ -171,3 +171,6 @@ How Tenary operator works: If the first part returns true the value is whatever 
 
 
 ${isChecked ? 'Checked' : ''}  // Using Tenary operator here
+
+
+Recursion is when a function re-run itself
