@@ -328,4 +328,39 @@ We will then use the function in the eventListener putting it under the **contai
 
 
 
+**15:33:50** 
 
+Always JSON.stringify() before saving to localStorage.
+
+### Lesson 16 Testing **15:34:37**
+
+Easiest way to test a code is just to open the website and try out the code. 
+
+#### Manual Testing: 
+When you manually open the website and try our code
+
+##### Disadvantages of Manual Testing 
+1. Hart to test every situation
+2. It is hard to re-test the code.
+
+#### Automated Testing 
+This means using code to test code.
+
+Create a folder to group all of our test code together. Create a file **moneyTest.js** we will then create an HTML file to run our test **test.html**
+
+##### Code inside **moneyTest.js** 
+* import {formatCurrency} from '../scripts/utils/money.js';
+*   
+* if (formatCurrency(2095) === '20.95') {
+*    console.log('passed');
+* } else {
+*    consloe.log('failed');s
+* }
+
+Remember we can't run javascript file directly we need to load this javascript file using an HTML file. We will then create an HTML file to run this test. Create a new file inside the test folder, and name it test.html.
+
+##### Two Types of Test Cases
+1. Basic test cases: test if the code is working or not (the first test case)
+2. Edge cases: We test the case with values that are a little bit tricky (the last three test cases)
+
+* When naming test it is best we group related tests together. A group of related tests is called **test suite**
