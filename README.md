@@ -368,3 +368,9 @@ Remember we can't run javascript file directly we need to load this javascript f
 ##### Testing Framework
 This is an external library that helps us write tests easier. There is a popular testing framework called **Jasmine**. Most testing frameworks are similar. Other testing frameworks are: Jest (for ReactJS), MochaJS. 
 
+**Jasmine** has a documentation page that shows you how to use the testing framework. 
+
+##### How to run a test using Jasmine.
+1. Open the test-jasmine folder
+2. Open the **SpecRunner.html** file. In Jasmine spec is another name for test (This file runs all the test)
+
