@@ -364,3 +364,7 @@ Remember we can't run javascript file directly we need to load this javascript f
 2. Edge cases: We test the case with values that are a little bit tricky (the last three test cases)
 
 * When naming test it is best we group related tests together. A group of related tests is called **test suite**
+
+##### Testing Framework
+This is an external library that helps us write tests easier. There is a popular testing framework called **Jasmine**. Most testing frameworks are similar. Other testing frameworks are: Jest (for ReactJS), MochaJS. 
+
