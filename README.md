@@ -433,4 +433,10 @@ Use PascalCase for things that generate objects. nside the class we are going to
 
 ##### Benefits of Classes 
 1. Cleaner than using a function
-2. They have extra features for OOP, the first feature is called a **Constructor** which let's us run some setup codeafter creating an object 
+2. They have extra features for OOP, the first feature is called a **Constructor** which let's us run some setup codeafter creating an object. More details about **constructor**
+   * The method has to be named Constructor
+   * We should not return anything from a constructor
+
+###### Private properties of methods 
+
+Classes let us make a property or a method private, which means it can only be accessed inside the class. Class property without a hash (#) in front is called a public property meaning it can be accessed anywhere
