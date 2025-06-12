@@ -439,4 +439,6 @@ Use PascalCase for things that generate objects. nside the class we are going to
 
 ###### Private properties of methods 
 
-Classes let us make a property or a method private, which means it can only be accessed inside the class. Class property without a hash (#) in front is called a public property meaning it can be accessed anywhere
+Classes let us make a property or a method private, which means it can only be accessed inside the class. Class property without a hash (#) in front is called a public property meaning it can be accessed anywhere.
+
+Converting an object into a class. Instead of using regular objects in this array we are giong to use a class to generate these objects
