@@ -420,4 +420,17 @@ The basic idea behind OOP, we organize our code into objects so we group the dat
 #### Why do we use OOP?
 OOP tries to represent the real world, in the real world a cart is a physical object so in OOPwe represent this physical object as a digital object or in this case a JS object. A physical cart can have products inside so our JS object can also have products inside. A physical cart also has actions we can take to modify the cart, like we add a product or remove a product, our JS object also has actions we can take to modify the cart like the addToCart function or the remove from cart function 
 
-Another reason we use OOP is because it is easy to create multiple objects. How do we create two separate carts in our code? with OOP this is easy. We will just make a copy of the cart object and paste it undeneath, we then rename it for instance businessCart
+Another reason we use OOP is because it is easy to create multiple objects. How do we create two separate carts in our code? with OOP this is easy. We will just make a copy of the cart object and paste it undeneath, we then rename it for instance businessCart.
+
+
+To make our code cleaner we use a function for creating multiple objects
+
+OOP has a feature called a **Class** this is specifically designed for generating objects. **Classes** are cleaner and has more features than using a function 
+
+Let's creat a new file cart-class.js 
+
+Use PascalCase for things that generate objects. nside the class we are going to put the properties and methods that we want for each object that we generate 
+
+##### Benefits of Classes 
+1. Cleaner than using a function
+2. They have extra features for OOP, the first feature is called a **Constructor** which let's us run some setup codeafter creating an object 
