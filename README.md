@@ -442,3 +442,10 @@ Use PascalCase for things that generate objects. nside the class we are going to
 Classes let us make a property or a method private, which means it can only be accessed inside the class. Class property without a hash (#) in front is called a public property meaning it can be accessed anywhere.
 
 Converting an object into a class. Instead of using regular objects in this array we are giong to use a class to generate these objects
+
+#### Inheritance
+This let's us reuse code between classes. It allows one class to get all the properties and methods from another class so we don't have to copy and paste the code.
+
+We use inheritance when we have one class which is a more specific type of another class.
+
+Polymorphism is an act of using a method without knowing the class
