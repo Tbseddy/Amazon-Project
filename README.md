@@ -449,3 +449,6 @@ This let's us reuse code between classes. It allows one class to get all the pro
 We use inheritance when we have one class which is a more specific type of another class.
 
 Polymorphism is an act of using a method without knowing the class
+
+#### Built in classes 
+These are classes that are provided by the language. e.g new Date()
