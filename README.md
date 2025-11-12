@@ -452,3 +452,6 @@ Polymorphism is an act of using a method without knowing the class
 
 #### Built in classes 
 These are classes that are provided by the language. e.g new Date()
+
+### Backend, Callbacks, Promises, and Async Await (19:32)
+Backend is another computer that manages the data of a website. To send an HTTP message we are going to use a class  called XMLHttpRequest, this is a built-in class 
